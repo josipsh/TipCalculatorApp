@@ -19,8 +19,6 @@ let errorMessageElement = document.getElementById("errorMessage")
 var pointerToPreviousButton = undefined
 var isAppDataDefault = true
 
-resetApp()
-
 //These methods are to make sure that the text cursor is always on the right side
 billInputElement.addEventListener('click' ,() =>{
     printBillAmount()
@@ -53,6 +51,10 @@ customTipElement.addEventListener("click", event => {
 
 btnResetElement.addEventListener("click", () =>{
     resetApp()
+    
+    isAppDataDefault = true
+    handleResetButton()
+
 })
 
 billInputElement.addEventListener('input' ,() =>{
@@ -119,9 +121,13 @@ peopleCountElement.addEventListener('input' ,() =>{
 for (let index = 0; index < tipPercentageElemtnts.length; index++) {
     tipPercentageElemtnts[index].addEventListener("click", event =>{
 
+        tipPercentage = parseInt(event.path[0].value)
+        processData()
+
         if(pointerToPreviousButton === undefined){
             pointerToPreviousButton = event
             event.path[0].className = "tip-amount-item-clicked tip"
+            return
         }else if(pointerToPreviousButton.path[0].type === "text"){
 
             pointerToPreviousButton.path[0].type = "button"
@@ -140,12 +146,9 @@ for (let index = 0; index < tipPercentageElemtnts.length; index++) {
             return
         }
 
-        tipPercentage = parseInt(event.path[0].value)
-
         isAppDataDefault = false
         
         handleResetButton()
-        processData()
     })
 }
 
@@ -172,6 +175,9 @@ customTipElement.addEventListener("input", event => {
     printTipPercentage()
     processData()
 })
+
+
+resetApp()
 
 
 function moveDigitToLeft(number)
@@ -246,8 +252,7 @@ function resetApp(){
     printPeopleCount()
     printResult()
 
-    isAppDataDefault = true
-    handleResetButton()
+    tipPercentageElemtnts[0].click()
 }
 
 function printBillAmount(){
