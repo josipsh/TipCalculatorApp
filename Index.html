@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip calculator</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="images/logo.svg">
+    </div>
+
+    <!-- App container -->
+    <div class="app-container">
+
+        <!-- input section -->
+        <div class="input-section-container">
+            <!-- Error message-->
+            <div class="error-message-section">
+                <label class="error-text" id="errorMessage"></label>
+            </div>
+
+            <!-- Bill total input-->
+            <div class="bill-total-input-section">
+                <label class="input-section-text">Bill</label>
+                <input class="text-input" type="text" id="bill">
+            </div>
+
+            <!-- Tip percentage input -->
+            <div class="tip-amount-input-section">
+                <label class="input-section-text">Select tip</label>
+                <!-- Tip options-->
+                <div class="tip-amount-item-container">
+                    <input class="tip-amount-item tip" type="button" value="5%" />
+                    <input class="tip-amount-item tip" type="button" value="10%" />
+                    <input class="tip-amount-item tip" type="button" value="15%" />
+                    <input class="tip-amount-item tip" type="button" value="25%" />
+                    <input class="tip-amount-item tip" type="button" value="50%" />
+                    <input class="tip-amount-item" id="customTip" type="button" value="Custom" />
+                </div>
+
+            </div>
+
+            <!-- People count input -->
+            <div class="people-count-input-section">
+                <label class="input-section-text">Number of People</label>
+                <input class="text-input" type="text" id="peopleCount">
+            </div>
+        </div>
+
+        <!-- Result section-->
+        <div class="result-section-container">
+            <div>
+                <!-- Tip amount section -->
+                <div class="result-section-data">
+                    <div>
+                        <label class="result-section-text-mid">Tip amount per person:</label>
+                        <label class="result-section-text-sm">/ People</label>
+                    </div>
+                    <label id="tipAmountPerPerson" class="result-section-text-lg">145.25</label>
+                </div>
+    
+                <!-- Total amount section-->
+                <div class="result-section-data">
+                    <div>
+                        <label class="result-section-text-mid">Total tip amount:</label>
+                        <label class="result-section-text-sm">/ People</label>
+                    </div>
+                    <label id="totalTipAmount" class="result-section-text-lg">145.25</label>
+                </div>
+            </div>
+
+            <div>
+                <input class="result-section-reset-btn" id="btnReset" type="button" value="RESET">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

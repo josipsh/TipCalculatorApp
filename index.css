@@ -1,0 +1,302 @@
+@font-face {
+    font-family: SpaceMono;
+    src: url(fonts/SpaceMono-Bold.ttf);
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-flow: column;
+}
+
+.logo-container{
+    width: auto;
+    height: 8vh;
+    margin: 5em 0em 1em 0em;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.app-container{
+    background: white;
+    padding: 1em;
+    border-radius: 1em;
+
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.input-section-container{
+    display: flex;
+    flex-grow: 1.3;
+    flex-flow: column;
+
+    padding: 0.5em 1em 0.5em 0.5em;
+
+    max-width: 300px;
+}
+
+.error-message-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.error-text{
+    font-family: SpaceMono;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: hsl(0, 100%, 62%);
+    text-align: center;
+}
+.bill-total-input-section{
+    display: flex;
+    flex-flow: column;
+
+    margin: 0.5em;
+}
+
+.bill-total-input-section > label{
+    margin-bottom: 0.3em;
+}
+
+.bill-total-input-section > input{
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-size: 0.7em;
+    background-position: 10px 10px;
+}
+
+.tip-amount-input-section{
+    display: flex;
+    flex-flow: column;
+
+    margin: 0.5em;
+
+}
+
+.tip-amount-input-section > label{
+    margin-bottom: 0.3em;
+}
+
+.tip-amount-item-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.tip-amount-item{
+    background-color: hsl(183, 100%, 15%);
+
+    border: none;
+    border-radius: 0.4em;
+    width: 80px;
+    padding: 0.5em;
+    margin: 0.3em;
+
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    
+    color: hsl(189, 41%, 97%);
+    font-family: SpaceMono;
+    font-size: 1em;
+
+}
+
+.tip-amount-item:hover{
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+
+.tip-amount-item:focus{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(189, 41%, 97%);
+}
+
+.tip-amount-item:active{
+    background-color: hsl(172, 68%, 69%);
+    color: hsl(189, 41%, 97%);
+}
+
+
+.tip-amount-item-clicked{
+    background-color: hsl(172, 67%, 45%);
+
+    border: none;
+    border-radius: 0.4em;
+    width: 80px;
+    padding: 0.5em;
+    margin: 0.3em;
+
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    
+    color: hsl(189, 41%, 97%);
+    font-family: SpaceMono;
+    font-size: 1em;
+
+}
+
+.tip-amount-item-clicked:hover{
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+
+.tip-amount-item-clicked:focus{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(189, 41%, 97%);
+}
+
+.tip-amount-item-clicked:active{
+    background-color: hsl(172, 68%, 69%);
+    color: hsl(189, 41%, 97%);
+}
+
+.people-count-input-section{
+    display: flex;
+    flex-flow: column;
+
+    margin: 0.5em;
+}
+
+.people-count-input-section > label{
+    margin-bottom: 0.3em;
+}
+
+.people-count-input-section > input{
+    background-image: url(images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-size: 0.7em;
+    background-position: 10px 13px;
+}
+
+.text-input{
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+
+    padding: 0.5em;
+    text-align: end;
+    
+    font-family: SpaceMono;
+    font-weight: 500;
+    font-size: 1em;
+    color: hsl(183, 100%, 15%);
+}
+
+.text-input:focus{
+    border: 2px solid hsl(172, 67%, 45%);
+    outline: none;
+}
+
+.text-input:invalid{
+    border-color: red;
+}
+
+.input-section-text{
+    font-family: SpaceMono;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: hsl(184, 14%, 56%);
+}
+
+.result-section-text-sm{
+    font-family: SpaceMono;
+    font-weight: 500;
+    font-size: 0.7em;
+
+    color: hsl(187, 15%, 56%);
+}
+
+
+.result-section-text-mid{
+    font-family: SpaceMono;
+    font-weight: 500;
+    font-size: 0.8em;
+
+    color: hsl(189, 41%, 97%);
+}
+
+.result-section-text-lg{
+    font-family: SpaceMono;
+    font-weight: 500;
+    font-size: 1.8em;
+    align-self: center;
+    color: hsl(172, 67%, 45%);
+}
+
+.result-section-container{
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 1em;
+    display: flex;
+    flex-flow: column;
+    
+    justify-content: space-between;
+
+    padding: 1em;
+    max-width: 500px;
+}
+
+.result-section-container > div {
+    display: flex;
+    flex-flow: column;
+}
+
+
+.result-section-data{
+    display: flex;
+    flex-flow: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 1em;
+    flex-wrap: wrap;
+}
+
+.result-section-data > div{
+    display: flex;
+    flex-flow: column;
+
+    margin-right: 1.5em;
+}
+
+.result-section-reset-btn{
+    display: flex;
+    justify-content: center;
+    
+    background-color: hsl(172, 67%, 45%);
+
+    border: none;
+    border-radius: 0.4em;
+    margin: 0.3em;
+    padding: 0.3em 0em;
+    
+    color: hsl(183, 100%, 15%);
+    font-family: SpaceMono;
+    font-size: 1em;
+}
+
+.result-section-reset-btn:focus{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.result-section-reset-btn:hover{
+    background-color: hsl(172, 71%, 64%);
+    color: hsl(183, 100%, 15%);
+}
+
+.result-section-reset-btn:active{
+    background-color: hsl(172, 58%, 82%);
+    color: hsl(183, 100%, 15%);
+}
+
+.result-section-reset-btn:disabled{
+    background-color: hsl(172, 66%, 29%);
+    color: hsl(183, 100%, 15%);
+}
